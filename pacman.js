@@ -8260,7 +8260,7 @@ Player.prototype.update = function(j) {
             map.onDotEat(this.tile.x, this.tile.y);
             ghostReleaser.onDotEat();
             fruit.onDotEat();
-            addScore((t=='.') ? 10 : 50);
+            addScore((t=='.') ? 1 : 5);
 
             if (t=='o')
                 energizer.activate();
