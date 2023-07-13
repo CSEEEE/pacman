@@ -3280,7 +3280,7 @@ var initRenderer = function(){
                 f.call(that,ctx);
             }
             else {
-                f(ctx);
+                // f(ctx);
             }
         },
 
@@ -4153,7 +4153,7 @@ var hud = (function(){
             }
         },
         draw: function(ctx) {
-            inGameMenu.draw(ctx);
+            // inGameMenu.draw(ctx);
             vcr.draw(ctx);
         },
         isValidState: function() {
@@ -4819,7 +4819,7 @@ var inGameMenu = (function() {
                 m.draw(ctx);
             }
             else {
-                btn.draw(ctx);
+                // btn.draw(ctx);
             }
         },
         isOpen: function() {
@@ -9458,12 +9458,12 @@ var executive = (function(){
         renderer.beginFrame();
         state.draw();
         if (hud.isValidState()) {
-            renderer.renderFunc(hud.draw);
+            // renderer.renderFunc(hud.draw);
         }
         renderer.endFrame();
 
         // Schedule the next tick.
-        reqFrame = requestAnimationFrame(tick);
+        // reqFrame = requestAnimationFrame(tick);
     };
 
     return {
