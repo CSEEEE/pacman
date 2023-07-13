@@ -3280,7 +3280,7 @@ var initRenderer = function(){
                 f.call(that,ctx);
             }
             else {
-                // f(ctx);
+                f(ctx);
             }
         },
 
@@ -4673,10 +4673,10 @@ var inGameMenu = (function() {
     };
 
     // button to enable in-game menu
-    // var btn = new Button(mapWidth/2 - w/2,mapHeight,w,h, function() {
+    var btn = new Button(mapWidth/2 - w/2,mapHeight,w,h, function() {
         // showMainMenu();
-        // vcr.onHudDisable();
-    // });
+        vcr.onHudDisable();
+    });
     // btn.setText("MENU");
     // btn.setFont(tileSize+"px ArcadeR","#FFF");
 
@@ -9458,12 +9458,12 @@ var executive = (function(){
         renderer.beginFrame();
         state.draw();
         if (hud.isValidState()) {
-            // renderer.renderFunc(hud.draw);
+            renderer.renderFunc(hud.draw);
         }
         renderer.endFrame();
 
         // Schedule the next tick.
-        // reqFrame = requestAnimationFrame(tick);
+        reqFrame = requestAnimationFrame(tick);
     };
 
     return {
