@@ -2747,26 +2747,26 @@ var atlas = (function(){
         drawOttoCells(row,4, DIR_LEFT);
 
         row++;
-        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 200, "#33ffff"); }, row, 0);
-        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 400, "#33ffff"); }, row, 1);
-        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 800, "#33ffff"); }, row, 2);
-        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 1600, "#33ffff");}, row, 3);
-        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 100, "#ffb8ff"); }, row, 4);
-        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 300, "#ffb8ff"); }, row, 5);
-        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 500, "#ffb8ff"); }, row, 6);
-        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 700, "#ffb8ff"); }, row, 7);
-        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 1000, "#ffb8ff"); }, row, 8);
-        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 2000, "#ffb8ff"); }, row, 9);
-        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 3000, "#ffb8ff"); }, row, 10);
-        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 5000, "#ffb8ff"); }, row, 11);
+        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 20, "#33ffff"); }, row, 0);
+        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 40, "#33ffff"); }, row, 1);
+        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 80, "#33ffff"); }, row, 2);
+        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 160, "#33ffff");}, row, 3);
+        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 10, "#ffb8ff"); }, row, 4);
+        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 30, "#ffb8ff"); }, row, 5);
+        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 50, "#ffb8ff"); }, row, 6);
+        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 70, "#ffb8ff"); }, row, 7);
+        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 100, "#ffb8ff"); }, row, 8);
+        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 200, "#ffb8ff"); }, row, 9);
+        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 300, "#ffb8ff"); }, row, 10);
+        drawAtCell(function(x,y) { drawPacPoints(ctx, x,y, 500, "#ffb8ff"); }, row, 11);
         row++;
-        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 100, "#fff"); }, row, 0);
-        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 200, "#fff"); }, row, 1);
-        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 500, "#fff"); }, row, 2);
-        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 700, "#fff"); }, row, 3);
-        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 1000, "#fff"); }, row, 4);
-        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 2000, "#fff"); }, row, 5);
-        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 5000, "#fff"); }, row, 6);
+        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 10, "#fff"); }, row, 0);
+        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 20, "#fff"); }, row, 1);
+        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 50, "#fff"); }, row, 2);
+        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 70, "#fff"); }, row, 3);
+        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 100, "#fff"); }, row, 4);
+        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 200, "#fff"); }, row, 5);
+        drawAtCell(function(x,y) { drawMsPacPoints(ctx, x,y, 500, "#fff"); }, row, 6);
 
         row++;
         drawAtCell(function(x,y) {
@@ -2813,10 +2813,10 @@ var atlas = (function(){
     var copyGhostPoints = function(destCtx,x,y,points) {
         var row = 16;
         var col = {
-            200: 0,
-            400: 1,
-            800: 2,
-            1600: 3,
+            20: 0,
+            40: 1,
+            80: 2,
+            160: 3,
         }[points];
         if (col != undefined) {
             copyCellTo(row, col, destCtx, x, y);
@@ -2826,14 +2826,14 @@ var atlas = (function(){
     var copyPacFruitPoints = function(destCtx,x,y,points) {
         var row = 16;
         var col = {
-            100: 4,
-            300: 5,
-            500: 6,
-            700: 7,
-            1000: 8,
-            2000: 9,
-            3000: 10,
-            5000: 11,
+            10: 4,
+            30: 5,
+            50: 6,
+            70: 7,
+            100: 8,
+            200: 9,
+            300: 10,
+            500: 11,
         }[points];
         if (col != undefined) {
             copyCellTo(row, col, destCtx, x, y);
@@ -2843,13 +2843,13 @@ var atlas = (function(){
     var copyMsPacFruitPoints = function(destCtx,x,y,points) {
         var row = 17;
         var col = {
-            100: 0,
-            200: 1,
-            500: 2,
-            700: 3,
-            1000: 4,
-            2000: 5,
-            5000: 6,
+            10: 0,
+            20: 1,
+            50: 2,
+            70: 3,
+            100: 4,
+            200: 5,
+            500: 6,
         }[points];
         if (col != undefined) {
             copyCellTo(row, col, destCtx, x, y);
@@ -5368,18 +5368,18 @@ var drawPacPoints = (function(){
         ctx.translate(0,-1);
 
         var f = {
-            100: draw100,
-            200: draw200,
-            300: draw300,
-            400: draw400,
-            500: draw500,
-            700: draw700,
-            800: draw800,
-            1000: draw1000,
-            1600: draw1600,
-            2000: draw2000,
-            3000: draw3000,
-            5000: draw5000,
+            10: draw100,
+            20: draw200,
+            30: draw300,
+            40: draw400,
+            50: draw500,
+            70: draw700,
+            80: draw800,
+            100: draw1000,
+            160: draw1600,
+            200: draw2000,
+            300: draw3000,
+            500: draw5000,
         }[points];
 
         if (f) {
@@ -5538,13 +5538,13 @@ var drawMsPacPoints = (function(){
         ctx.translate(x+0.5,y+0.5);
 
         var f = {
-            100: draw100,
-            200: draw200,
-            500: draw500,
-            700: draw700,
-            1000: draw1000,
-            2000: draw2000,
-            5000: draw5000,
+            10: draw100,
+            20: draw200,
+            50: draw500,
+            70: draw700,
+            100: draw1000,
+            200: draw2000,
+            500: draw5000,
         }[points];
 
         if (f) {
@@ -8961,7 +8961,7 @@ var energizer = (function() {
             audio.ghostTurnToBlue.stopLoop();
             count = 0;
             active = false;
-            points = 100;
+            points = 10;
             pointsFramesLeft = 0;
             for (i=0; i<4; i++)
                 ghosts[i].scared = false;
@@ -8980,7 +8980,7 @@ var energizer = (function() {
             audio.ghostTurnToBlue.startLoop();
             active = true;
             count = 0;
-            points = 100;
+            points = 10;
             for (i=0; i<4; i++) {
                 ghosts[i].onEnergized();
             }
@@ -9074,14 +9074,14 @@ BaseFruit.prototype = {
 var PacFruit = function() {
     BaseFruit.call(this);
     this.fruits = [
-        {name:'cherry',     points:100},
-        {name:'strawberry', points:300},
-        {name:'orange',     points:500},
-        {name:'apple',      points:700},
-        {name:'melon',      points:1000},
-        {name:'galaxian',   points:2000},
-        {name:'bell',       points:3000},
-        {name:'key',        points:5000},
+        {name:'cherry',     points:10},
+        {name:'strawberry', points:30},
+        {name:'orange',     points:50},
+        {name:'apple',      points:70},
+        {name:'melon',      points:100},
+        {name:'galaxian',   points:200},
+        {name:'bell',       points:300},
+        {name:'key',        points:500},
     ];
 
     this.order = [
@@ -9178,13 +9178,13 @@ var PATH_EXIT = 2;
 var MsPacFruit = function() {
     BaseFruit.call(this);
     this.fruits = [
-        {name: 'cherry',     points: 100},
-        {name: 'strawberry', points: 200},
-        {name: 'orange',     points: 500},
-        {name: 'pretzel',    points: 700},
-        {name: 'apple',      points: 1000},
-        {name: 'pear',       points: 2000},
-        {name: 'banana',     points: 5000},
+        {name: 'cherry',     points: 10},
+        {name: 'strawberry', points: 20},
+        {name: 'orange',     points: 50},
+        {name: 'pretzel',    points: 70},
+        {name: 'apple',      points: 100},
+        {name: 'pear',       points: 200},
+        {name: 'banana',     points: 500},
     ];
 
     this.dotLimit1 = 64;
@@ -10509,24 +10509,24 @@ var scoreState = (function(){
         atlas.drawGhostPoints(ctx,x+8*tileSize,y,1600);
 
         var mspac_fruits = [
-            {name: 'cherry',     points: 100},
-            {name: 'strawberry', points: 200},
-            {name: 'orange',     points: 500},
-            {name: 'pretzel',    points: 700},
-            {name: 'apple',      points: 1000},
-            {name: 'pear',       points: 2000},
-            {name: 'banana',     points: 5000},
+            {name: 'cherry',     points: 10},
+            {name: 'strawberry', points: 20},
+            {name: 'orange',     points: 50},
+            {name: 'pretzel',    points: 70},
+            {name: 'apple',      points: 100},
+            {name: 'pear',       points: 200},
+            {name: 'banana',     points: 500},
         ];
 
         var pac_fruits = [
-            {name:'cherry',     points:100},
-            {name:'strawberry', points:300},
-            {name:'orange',     points:500},
-            {name:'apple',      points:700},
-            {name:'melon',      points:1000},
-            {name:'galaxian',   points:2000},
-            {name:'bell',       points:3000},
-            {name:'key',        points:5000},
+            {name:'cherry',     points:10},
+            {name:'strawberry', points:30},
+            {name:'orange',     points:50},
+            {name:'apple',      points:70},
+            {name:'melon',      points:100},
+            {name:'galaxian',   points:200},
+            {name:'bell',       points:300},
+            {name:'key',        points:500},
         ];
 
         var i,f;
@@ -10583,7 +10583,7 @@ var aboutState = (function(){
     var menu = new Menu("", 2*tileSize,mapHeight-11*tileSize,mapWidth-4*tileSize,3*tileSize,tileSize,tileSize+"px ArcadeR", "#EEE");
     menu.addTextButton("GO TO PROJECT PAGE",
         function() {
-            window.open("https://github.com/shaunew/Pac-Man");
+            window.open("https://github.com/cseeee/pacman");
         });
     menu.addTextButton("BACK",
         function() {
