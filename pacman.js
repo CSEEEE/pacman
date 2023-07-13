@@ -10480,7 +10480,7 @@ var scoreState = (function(){
 
         y += 3*tileSize;
         atlas.drawGhostSprite(ctx,x,y,0,DIR_RIGHT,true);
-        atlas.drawGhostPoints(ctx,x+2*tileSize,y,200);
+        atlas.drawGhostPoints(ctx,x+2*tileSize,y,20);
 
         var alpha = ctx.globalAlpha;
 
@@ -10489,7 +10489,7 @@ var scoreState = (function(){
         atlas.drawGhostSprite(ctx,x,y,0,DIR_RIGHT,true);
         ctx.globalAlpha = alpha;
         atlas.drawGhostSprite(ctx,x+2*tileSize,y,0,DIR_RIGHT,true);
-        atlas.drawGhostPoints(ctx,x+4*tileSize,y,400);
+        atlas.drawGhostPoints(ctx,x+4*tileSize,y,40);
 
         y += 2*tileSize;
         ctx.globalAlpha = alpha*0.5;
@@ -10497,7 +10497,7 @@ var scoreState = (function(){
         atlas.drawGhostSprite(ctx,x+2*tileSize,y,0,DIR_RIGHT,true);
         ctx.globalAlpha = alpha;
         atlas.drawGhostSprite(ctx,x+4*tileSize,y,0,DIR_RIGHT,true);
-        atlas.drawGhostPoints(ctx,x+6*tileSize,y,800);
+        atlas.drawGhostPoints(ctx,x+6*tileSize,y,80);
 
         y += 2*tileSize;
         ctx.globalAlpha = alpha*0.5;
@@ -10506,7 +10506,7 @@ var scoreState = (function(){
         atlas.drawGhostSprite(ctx,x+4*tileSize,y,0,DIR_RIGHT,true);
         ctx.globalAlpha = alpha;
         atlas.drawGhostSprite(ctx,x+6*tileSize,y,0,DIR_RIGHT,true);
-        atlas.drawGhostPoints(ctx,x+8*tileSize,y,1600);
+        atlas.drawGhostPoints(ctx,x+8*tileSize,y,160);
 
         var mspac_fruits = [
             {name: 'cherry',     points: 10},
