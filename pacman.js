@@ -4673,12 +4673,12 @@ var inGameMenu = (function() {
     };
 
     // button to enable in-game menu
-    var btn = new Button(mapWidth/2 - w/2,mapHeight,w,h, function() {
-        showMainMenu();
-        vcr.onHudDisable();
-    });
-    btn.setText("MENU");
-    btn.setFont(tileSize+"px ArcadeR","#FFF");
+    // var btn = new Button(mapWidth/2 - w/2,mapHeight,w,h, function() {
+        // showMainMenu();
+        // vcr.onHudDisable();
+    // });
+    // btn.setText("MENU");
+    // btn.setFont(tileSize+"px ArcadeR","#FFF");
 
     // confirms a menu action
     var confirmMenu = new Menu("QUESTION?",2*tileSize,5*tileSize,mapWidth-4*tileSize,3*tileSize,tileSize,tileSize+"px ArcadeR", "#EEE");
