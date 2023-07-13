@@ -11128,6 +11128,18 @@ var overState = (function() {
             renderer.blitMap();
             renderer.drawScore();
             renderer.drawMessage("GAME  OVER", "#F00", 9, 20);
+
+            // Here is where you can update the HTML content with the score
+            const earnedSatsText = `EARNED SATS: ${getScore()}`;
+            const earnedSatsElement = document.getElementById('earned-sats');
+            if (earnedSatsElement) {
+                earnedSatsElement.textContent = earnedSatsText;
+            }
+            
+            // Here is where you can post a message with the score
+            const earnedSats = getScore();
+            window.parent.postMessage({ earnedSats: earnedSats }, '*');
+            console.log('postMessage sent with earnedSats:', earnedSats);
         },
         update: function() {
             if (frames == 120) {
